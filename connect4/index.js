@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () =>{
       const square = document.createElement('div')
       square.classList.add('grid-item')
       square.setAttribute('id', `${i}`)
-      square.style.backgroundColor = 'teal'
+      square.style.backgroundColor = 'rgba(217, 217, 217, 0.5)'
       square.style.height = '14vh'
       square.style.width = '13vw'
       square.style.margin = '1px 2px 1px 2px'
@@ -19,18 +19,20 @@ document.addEventListener('DOMContentLoaded', () =>{
   }
 
   makeGrid()
+
+  grid.style.margin = '50px 10px 10px 30px'
   
-  const playerOneMO
-  const playerTwoMO
+  // const playerOneMO
+  // const playerTwoMO
 
 
-  function playerOne(e){
-    switch(e.keyCode){
-      case 65://A
+  // function playerOne(e){
+  //   switch(e.keyCode){
+  //     case 65://A
 
-      case 53://S
+  //     case 53://S
 
-    }
-  }
+  //   }
+  // }
 
 })
