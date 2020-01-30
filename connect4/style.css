@@ -1,0 +1,17 @@
+
+
+.active{
+  border: 2px solid black ;
+}
+
+.active2{
+  border: 2px solid yellow;
+}
+
+.grid-item{
+  background-color: rgba(217, 217, 217, 0.5);
+  height: 14vh;
+  width: 13vw;
+  margin: 1px 2px 1px 2px;
+  display: inline-block;
+}
