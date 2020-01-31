@@ -1,17 +1,19 @@
 
 
 .active{
-  border: 2px solid black ;
+  border: 2px dotted black ;
+  margin: 2px;
 }
 
 .active2{
-  border: 2px solid yellow;
+  border: 2px dotted yellow;
+  margin: 2px;
 }
 
 .grid-item{
   background-color: rgba(217, 217, 217, 0.5);
   height: 14vh;
-  width: 13vw;
+  width: 12vw;
   margin: 1px 2px 1px 2px;
   display: inline-block;
 }
