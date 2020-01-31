@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     playerTwo = 6
 
     board[playerOne].classList.add('active')
-    // board[playerTwo].classList.add('active2')
+    board[playerTwo].classList.add('active2')
   }
   startbox()
 
@@ -71,9 +71,41 @@ document.addEventListener('DOMContentLoaded', () =>{
   
         }  
         break
+      case 107:
+        if (playerTwo !== 0) {
+          if (playerTwo < 0 || playerTwo === -1) {
+            playerTwo = 6
+          }
+          if (playerTwo > 6 || playerTwo === 7) {
+            playerTwo = 0
+          }
+          board.forEach(square => square.classList.remove('active2'))
+
+          playerTwo = playerTwo - 1
+          board[playerTwo].classList.add('active2')
+
+        } 
+        break
+      case 108:
+        if (playerTwo !== 6) {
+          if (playerTwo < 0 || playerTwo === -1) {
+            playerTwo = 6
+          }
+          if (playerTwo > 6 || playerTwo === 7) {
+            playerTwo = 0
+          }
+          board.forEach(square => square.classList.remove('active2'))
+
+          playerTwo = playerTwo + 1
+          board[playerTwo].classList.add('active2')
+
+        } 
+        break
+
         default:
       }
     console.log(playerOne)
+    console.log(e.keyCode)
     }
 
 
