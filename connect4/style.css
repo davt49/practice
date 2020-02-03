@@ -10,6 +10,28 @@
   /* margin: 2px; */
 }
 
+.grid{
+  margin: 50px 10px 10px 30px;
+}
+
+.player-one-title{
+  font-size: 20px;
+  text-align: center;
+  color: black;
+}
+.player-two-title{
+  font-size: 20px;
+  text-align: center;
+  color: goldenrod;
+}
+
+#player-turn{
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  color: crimson;
+}
+
 .grid-item{
   background-color: rgba(217, 217, 217, 0.5);
   height: 12.5vh;

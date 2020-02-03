@@ -4,8 +4,11 @@ document.addEventListener('DOMContentLoaded', () =>{
   const board = []
   const height = 6
   const width = 7
-  
 
+  let playerOne
+  let playerTwo
+
+  //Set the Grid
   function makeGrid(){
     for (i = 0; i < height * width; i++){
       const square = document.createElement('div')
@@ -15,15 +18,8 @@ document.addEventListener('DOMContentLoaded', () =>{
       grid.append(square)
     }
   }
-
   makeGrid()
-
-  grid.style.margin = '50px 10px 10px 30px'
-  document.querySelector('.player-one-title').style.color = 'black'
-  document.querySelector('.player-two-title').style.color = 'goldenrod'
-  
-  let playerOne
-  let playerTwo
+ 
 
   //Hover class (for display) for the two players
   function startbox(){
@@ -35,8 +31,6 @@ document.addEventListener('DOMContentLoaded', () =>{
   }
   startbox()
 
-
-  
   //Hover controlls for the two players
   function handleKeyDown(e){
  
@@ -121,12 +115,18 @@ document.addEventListener('DOMContentLoaded', () =>{
               && board[playerOne].classList.contains('cross') === false
               && board[playerOne].classList.contains('circle') === false){
                 board[`${playerOne + width * i}`].classList.add('cross')
+                window.removeEventListener('keypress', enterOne)
+                window.addEventListener('keypress', enterTwo)
+                document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
                 return
               }
             }
             if (board[`${playerOne + width}`].classList.contains('cross')
             || board[`${playerOne + width}`].classList.contains('circle') ){
               board[playerOne].classList.add('cross')
+              window.removeEventListener('keypress', enterOne)
+              window.addEventListener('keypress', enterTwo)
+              document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
               return
             }
           }
@@ -134,12 +134,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             for(i = 5; i > 0; i-- ){
               if (board[`${playerOne + width * i}`].classList.contains('cross') === false && board[`${playerOne + width * i}`].classList.contains('circle') === false){
                 board[`${playerOne + width * i}`].classList.add('cross')
+                window.removeEventListener('keypress', enterOne)
+                window.addEventListener('keypress', enterTwo)
+                document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
                 return
               }
             }
             if (board[`${playerOne + width}`].classList.contains('cross')
               || board[`${playerOne + width}`].classList.contains('circle')) {
               board[playerOne].classList.add('cross')
+              window.removeEventListener('keypress', enterOne)
+              window.addEventListener('keypress', enterTwo)
+              document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
               return
             }
           }
@@ -147,12 +153,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             for(i = 5; i > 0; i-- ){
               if (board[`${playerOne + width * i}`].classList.contains('cross') === false && board[`${playerOne + width * i}`].classList.contains('circle') === false){
                 board[`${playerOne + width * i}`].classList.add('cross')
+                window.removeEventListener('keypress', enterOne)
+                window.addEventListener('keypress', enterTwo)
+                document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
                 return
               }
             }
             if (board[`${playerOne + width}`].classList.contains('cross')
             || board[`${playerOne + width}`].classList.contains('circle') ){
               board[playerOne].classList.add('cross')
+              window.removeEventListener('keypress', enterOne)
+              window.addEventListener('keypress', enterTwo)
+              document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
               return
             }
           }
@@ -160,12 +172,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             for(i = 5; i > 0; i-- ){
               if (board[`${playerOne + width * i}`].classList.contains('cross') === false && board[`${playerOne + width * i}`].classList.contains('circle') === false){
                 board[`${playerOne + width * i}`].classList.add('cross')
+                window.removeEventListener('keypress', enterOne)
+                window.addEventListener('keypress', enterTwo)
+                document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
                 return
               }
             }
             if (board[`${playerOne + width}`].classList.contains('cross')
             || board[`${playerOne + width}`].classList.contains('circle') ){
               board[playerOne].classList.add('cross')
+              window.removeEventListener('keypress', enterOne)
+              window.addEventListener('keypress', enterTwo)
+              document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
               return
             }
           }
@@ -173,12 +191,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             for(i = 5; i > 0; i-- ){
               if (board[`${playerOne + width * i}`].classList.contains('cross') === false && board[`${playerOne + width * i}`].classList.contains('circle') === false){
                 board[`${playerOne + width * i}`].classList.add('cross')
+                window.removeEventListener('keypress', enterOne)
+                window.addEventListener('keypress', enterTwo)
+                document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
                 return
               }
             }
             if (board[`${playerOne + width}`].classList.contains('cross')
             || board[`${playerOne + width}`].classList.contains('circle') ){
               board[playerOne].classList.add('cross')
+              window.removeEventListener('keypress', enterOne)
+              window.addEventListener('keypress', enterTwo)
+              document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
               return
             }
           }
@@ -186,12 +210,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             for(i = 5; i > 0; i-- ){
               if (board[`${playerOne + width * i}`].classList.contains('cross') === false && board[`${playerOne + width * i}`].classList.contains('circle') === false){
                 board[`${playerOne + width * i}`].classList.add('cross')
+                window.removeEventListener('keypress', enterOne)
+                window.addEventListener('keypress', enterTwo)
+                document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
                 return
               }
             }
             if (board[`${playerOne + width}`].classList.contains('cross')
             || board[`${playerOne + width}`].classList.contains('circle') ){
               board[playerOne].classList.add('cross')
+              window.removeEventListener('keypress', enterOne)
+              window.addEventListener('keypress', enterTwo)
+              document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
               return
             }
           }
@@ -199,15 +229,22 @@ document.addEventListener('DOMContentLoaded', () =>{
             for(i = 5; i > 0; i-- ){
               if (board[`${playerOne + width * i}`].classList.contains('cross') === false && board[`${playerOne + width * i}`].classList.contains('circle') === false){
                 board[`${playerOne + width * i}`].classList.add('cross')
+                window.removeEventListener('keypress', enterOne)
+                window.addEventListener('keypress', enterTwo)
+                document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
                 return
               }
             }
             if (board[`${playerOne + width}`].classList.contains('cross')
               || board[`${playerOne + width}`].classList.contains('circle')) {
               board[playerOne].classList.add('cross')
+              window.removeEventListener('keypress', enterOne)
+              window.addEventListener('keypress', enterTwo)
+              document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
               return
             }
           }
+          
 
           break
           default:
@@ -222,12 +259,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             for (i = 5; i > 0; i--) {
               if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
                 board[`${playerTwo + width * i}`].classList.add('circle')
+                window.removeEventListener('keypress', enterTwo)
+                window.addEventListener('keypress', enterOne)
+                document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
                 return
               }
             }
             if (board[`${playerTwo + width}`].classList.contains('cross')
               || board[`${playerTwo + width}`].classList.contains('circle')) {
               board[playerTwo].classList.add('circle')
+              window.removeEventListener('keypress', enterTwo)
+              window.addEventListener('keypress', enterOne)
+              document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
               return
             }
           }
@@ -235,12 +278,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             for (i = 5; i > 0; i--) {
               if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
                 board[`${playerTwo + width * i}`].classList.add('circle')
+                window.removeEventListener('keypress', enterTwo)
+              window.addEventListener('keypress', enterOne)
+              document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
                 return
               }
             }
             if (board[`${playerTwo + width}`].classList.contains('cross')
               || board[`${playerTwo + width}`].classList.contains('circle')) {
               board[playerTwo].classList.add('circle')
+              window.removeEventListener('keypress', enterTwo)
+              window.addEventListener('keypress', enterOne)
+              document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
               return
             }
           }
@@ -248,12 +297,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             for (i = 5; i > 0; i--) {
               if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
                 board[`${playerTwo + width * i}`].classList.add('circle')
+                window.removeEventListener('keypress', enterTwo)
+              window.addEventListener('keypress', enterOne)
+              document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
                 return
               }
             }
             if (board[`${playerTwo + width}`].classList.contains('cross')
               || board[`${playerTwo + width}`].classList.contains('circle')) {
               board[playerTwo].classList.add('circle')
+              window.removeEventListener('keypress', enterTwo)
+              window.addEventListener('keypress', enterOne)
+              document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
               return
             }
           }
@@ -261,12 +316,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             for (i = 5; i > 0; i--) {
               if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
                 board[`${playerTwo + width * i}`].classList.add('circle')
+                window.removeEventListener('keypress', enterTwo)
+              window.addEventListener('keypress', enterOne)
+              document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
                 return
               }
             }
             if (board[`${playerTwo + width}`].classList.contains('cross')
               || board[`${playerTwo + width}`].classList.contains('circle')) {
               board[playerTwo].classList.add('circle')
+              window.removeEventListener('keypress', enterTwo)
+              window.addEventListener('keypress', enterOne)
+              document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
               return
             }
           }
@@ -274,12 +335,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             for (i = 5; i > 0; i--) {
               if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
                 board[`${playerTwo + width * i}`].classList.add('circle')
+                window.removeEventListener('keypress', enterTwo)
+              window.addEventListener('keypress', enterOne)
+              document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
                 return
               }
             }
             if (board[`${playerTwo + width}`].classList.contains('cross')
               || board[`${playerTwo + width}`].classList.contains('circle')) {
               board[playerTwo].classList.add('circle')
+              window.removeEventListener('keypress', enterTwo)
+              window.addEventListener('keypress', enterOne)
+              document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
               return
             }
           }
@@ -287,12 +354,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             for (i = 5; i > 0; i--) {
               if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
                 board[`${playerTwo + width * i}`].classList.add('circle')
+                window.removeEventListener('keypress', enterTwo)
+                window.addEventListener('keypress', enterOne)
+                document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
                 return
               }
             }
             if (board[`${playerTwo + width}`].classList.contains('cross')
               || board[`${playerTwo + width}`].classList.contains('circle')) {
               board[playerTwo].classList.add('circle')
+              window.removeEventListener('keypress', enterTwo)
+              window.addEventListener('keypress', enterOne)
+              document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
               return
             }
           }
@@ -300,12 +373,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             for (i = 5; i > 0; i--) {
               if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
                 board[`${playerTwo + width * i}`].classList.add('circle')
+                window.removeEventListener('keypress', enterTwo)
+                window.addEventListener('keypress', enterOne)
+                document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
                 return
               }
             }
             if (board[`${playerTwo + width}`].classList.contains('cross')
               || board[`${playerTwo + width}`].classList.contains('circle')) {
               board[playerTwo].classList.add('circle')
+              window.removeEventListener('keypress', enterTwo)
+              window.addEventListener('keypress', enterOne)
+              document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
               return
             }
           }
@@ -314,9 +393,9 @@ document.addEventListener('DOMContentLoaded', () =>{
       }
     }
 
-
-    window.addEventListener('keypress', handleKeyDown)
     window.addEventListener('keypress', enterOne)
-    window.addEventListener('keypress', enterTwo)
+
+  
+    window.addEventListener('keypress', handleKeyDown)
 
 })
