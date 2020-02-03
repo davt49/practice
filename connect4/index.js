@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () =>{
 
   grid.style.margin = '50px 10px 10px 30px'
   document.querySelector('.player-one-title').style.color = 'black'
-  document.querySelector('.player-two-title').style.color = 'yellow'
+  document.querySelector('.player-two-title').style.color = 'goldenrod'
   
   let playerOne
   let playerTwo
 
-
+  //Hover class (for display) for the two players
   function startbox(){
     playerOne = 0
     playerTwo = 6
@@ -37,10 +37,11 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
   
-  
+  //Hover controlls for the two players
   function handleKeyDown(e){
  
     switch(e.keyCode){
+      //playerOne
       case 97:
         if (playerOne !== 0){  
           if (playerOne < 0 || playerOne === -1) {
@@ -71,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () =>{
   
         }  
         break
+        //playerTwo
       case 107:
         if (playerTwo !== 0) {
           if (playerTwo < 0 || playerTwo === -1) {
@@ -104,11 +106,217 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         default:
       }
-    console.log(playerOne)
     console.log(e.keyCode)
+    }
+
+    //PlayerOne submit
+    function enterOne(e){
+
+      switch(e.keyCode){
+        case 122:
+          if (playerOne === 0){
+            for(i = 5; i > 0; i-- ){
+              if (board[`${playerOne + width * i}`].classList.contains('cross') === false 
+              && board[`${playerOne + width * i}`].classList.contains('circle') === false
+              && board[playerOne].classList.contains('cross') === false
+              && board[playerOne].classList.contains('circle') === false){
+                board[`${playerOne + width * i}`].classList.add('cross')
+                return
+              }
+            }
+            if (board[`${playerOne + width}`].classList.contains('cross')
+            || board[`${playerOne + width}`].classList.contains('circle') ){
+              board[playerOne].classList.add('cross')
+              return
+            }
+          }
+          if (playerOne === 1){
+            for(i = 5; i > 0; i-- ){
+              if (board[`${playerOne + width * i}`].classList.contains('cross') === false && board[`${playerOne + width * i}`].classList.contains('circle') === false){
+                board[`${playerOne + width * i}`].classList.add('cross')
+                return
+              }
+            }
+            if (board[`${playerOne + width}`].classList.contains('cross')
+              || board[`${playerOne + width}`].classList.contains('circle')) {
+              board[playerOne].classList.add('cross')
+              return
+            }
+          }
+          if (playerOne === 2){
+            for(i = 5; i > 0; i-- ){
+              if (board[`${playerOne + width * i}`].classList.contains('cross') === false && board[`${playerOne + width * i}`].classList.contains('circle') === false){
+                board[`${playerOne + width * i}`].classList.add('cross')
+                return
+              }
+            }
+            if (board[`${playerOne + width}`].classList.contains('cross')
+            || board[`${playerOne + width}`].classList.contains('circle') ){
+              board[playerOne].classList.add('cross')
+              return
+            }
+          }
+          if (playerOne === 3){
+            for(i = 5; i > 0; i-- ){
+              if (board[`${playerOne + width * i}`].classList.contains('cross') === false && board[`${playerOne + width * i}`].classList.contains('circle') === false){
+                board[`${playerOne + width * i}`].classList.add('cross')
+                return
+              }
+            }
+            if (board[`${playerOne + width}`].classList.contains('cross')
+            || board[`${playerOne + width}`].classList.contains('circle') ){
+              board[playerOne].classList.add('cross')
+              return
+            }
+          }
+          if (playerOne === 4){
+            for(i = 5; i > 0; i-- ){
+              if (board[`${playerOne + width * i}`].classList.contains('cross') === false && board[`${playerOne + width * i}`].classList.contains('circle') === false){
+                board[`${playerOne + width * i}`].classList.add('cross')
+                return
+              }
+            }
+            if (board[`${playerOne + width}`].classList.contains('cross')
+            || board[`${playerOne + width}`].classList.contains('circle') ){
+              board[playerOne].classList.add('cross')
+              return
+            }
+          }
+          if (playerOne === 5){
+            for(i = 5; i > 0; i-- ){
+              if (board[`${playerOne + width * i}`].classList.contains('cross') === false && board[`${playerOne + width * i}`].classList.contains('circle') === false){
+                board[`${playerOne + width * i}`].classList.add('cross')
+                return
+              }
+            }
+            if (board[`${playerOne + width}`].classList.contains('cross')
+            || board[`${playerOne + width}`].classList.contains('circle') ){
+              board[playerOne].classList.add('cross')
+              return
+            }
+          }
+          if (playerOne === 6){
+            for(i = 5; i > 0; i-- ){
+              if (board[`${playerOne + width * i}`].classList.contains('cross') === false && board[`${playerOne + width * i}`].classList.contains('circle') === false){
+                board[`${playerOne + width * i}`].classList.add('cross')
+                return
+              }
+            }
+            if (board[`${playerOne + width}`].classList.contains('cross')
+              || board[`${playerOne + width}`].classList.contains('circle')) {
+              board[playerOne].classList.add('cross')
+              return
+            }
+          }
+
+          break
+          default:
+      }
+    }
+
+    //PlayerTwo submit
+    function enterTwo(e){
+      switch(e.keyCode){
+        case 44:
+          if (playerTwo === 0) {
+            for (i = 5; i > 0; i--) {
+              if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
+                board[`${playerTwo + width * i}`].classList.add('circle')
+                return
+              }
+            }
+            if (board[`${playerTwo + width}`].classList.contains('cross')
+              || board[`${playerTwo + width}`].classList.contains('circle')) {
+              board[playerTwo].classList.add('circle')
+              return
+            }
+          }
+          if (playerTwo === 1) {
+            for (i = 5; i > 0; i--) {
+              if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
+                board[`${playerTwo + width * i}`].classList.add('circle')
+                return
+              }
+            }
+            if (board[`${playerTwo + width}`].classList.contains('cross')
+              || board[`${playerTwo + width}`].classList.contains('circle')) {
+              board[playerTwo].classList.add('circle')
+              return
+            }
+          }
+          if (playerTwo === 2) {
+            for (i = 5; i > 0; i--) {
+              if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
+                board[`${playerTwo + width * i}`].classList.add('circle')
+                return
+              }
+            }
+            if (board[`${playerTwo + width}`].classList.contains('cross')
+              || board[`${playerTwo + width}`].classList.contains('circle')) {
+              board[playerTwo].classList.add('circle')
+              return
+            }
+          }
+          if (playerTwo === 3) {
+            for (i = 5; i > 0; i--) {
+              if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
+                board[`${playerTwo + width * i}`].classList.add('circle')
+                return
+              }
+            }
+            if (board[`${playerTwo + width}`].classList.contains('cross')
+              || board[`${playerTwo + width}`].classList.contains('circle')) {
+              board[playerTwo].classList.add('circle')
+              return
+            }
+          }
+          if (playerTwo === 4) {
+            for (i = 5; i > 0; i--) {
+              if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
+                board[`${playerTwo + width * i}`].classList.add('circle')
+                return
+              }
+            }
+            if (board[`${playerTwo + width}`].classList.contains('cross')
+              || board[`${playerTwo + width}`].classList.contains('circle')) {
+              board[playerTwo].classList.add('circle')
+              return
+            }
+          }
+          if (playerTwo === 5) {
+            for (i = 5; i > 0; i--) {
+              if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
+                board[`${playerTwo + width * i}`].classList.add('circle')
+                return
+              }
+            }
+            if (board[`${playerTwo + width}`].classList.contains('cross')
+              || board[`${playerTwo + width}`].classList.contains('circle')) {
+              board[playerTwo].classList.add('circle')
+              return
+            }
+          }
+          if (playerTwo === 6) {
+            for (i = 5; i > 0; i--) {
+              if (board[`${playerTwo + width * i}`].classList.contains('circle') === false && board[`${playerTwo + width * i}`].classList.contains('cross') === false) {
+                board[`${playerTwo + width * i}`].classList.add('circle')
+                return
+              }
+            }
+            if (board[`${playerTwo + width}`].classList.contains('cross')
+              || board[`${playerTwo + width}`].classList.contains('circle')) {
+              board[playerTwo].classList.add('circle')
+              return
+            }
+          }
+          break
+        default:
+      }
     }
 
 
     window.addEventListener('keypress', handleKeyDown)
+    window.addEventListener('keypress', enterOne)
+    window.addEventListener('keypress', enterTwo)
 
 })
