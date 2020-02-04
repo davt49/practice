@@ -423,15 +423,57 @@ document.addEventListener('DOMContentLoaded', () =>{
       }
     }
 
+    // function checkaround(){
+    //     for (i = 0;i < 41;i++){
+    //       let numCheck = occupiedCross[i]
+    //       let leftA = occupiedCross[i - 1]
+    //       let leftB = occupiedCross[i - 2]
+    //       let leftC = occupiedCross[i - 3]
+    //       let rightA = occupiedCross[i + 1]
+    //       let rightB = occupiedCross[i + 2]
+    //       let rightC = occupiedCross[i + 3]
+    //       let upA = occupiedCross[i - width]
+    //       let upB = occupiedCross[i - width * 2]
+    //       let upC = occupiedCross[i - width * 3]
+    //       let downA = occupiedCross[i + width]
+    //       let downB = occupiedCross[i + width * 2]
+    //       let downC = occupiedCross[i + width * 3]
+    //     console.log(i)
+    //     console.log(numCheck)
+    //     console.log(leftA)
+    //   }
+    // }
 
-    function scoreCheck(){
-      const left = [board[i], board[i]]
+    // checkaround()
 
-      console.log(occupiedCross)
-      console.log(occupiedCircle)
+    // function scoreCheck(){
+    //   const numCheck = occupiedCross[checkaround]
+    //   const leftA = occupiedCross[checkaround - 1]
+    //   const leftB = occupiedCross[checkaround - 2]
+    //   const leftC = occupiedCross[checkaround - 3]
+    //   const rightA = occupiedCross[checkaround + 1]
+    //   const rightB = occupiedCross[checkaround + 2]
+    //   const rightC = occupiedCross[checkaround + 3]
+    //   const upA = occupiedCross[checkaround - width]
+    //   const upB = occupiedCross[checkaround - width * 2]
+    //   const upC = occupiedCross[checkaround - width * 3]
+    //   const downA = occupiedCross[checkaround + width]
+    //   const downB = occupiedCross[checkaround + width * 2]
+    //   const downC = occupiedCross[checkaround + width * 3]
+
+    //   // const left = [board[numCheck], board[leftA], board[leftb], board[leftc]]
+    //   // const right = [board[occupiedCross[checkaround]], board[checkaround + 1], board[checkaround + 2], board[checkaround + 3]]
+    //   // const up = [board[occupiedCross[checkaround]], board[checkaround - width], board[checkaround - width * 2], board[checkaround - width * 3]]
+    //   // const down = [board[occupiedCross[checkaround]], board[checkaround + width], board[checkaround + width * 2], board[checkaround + width * 3]]
+
+    //   // console.log(parseInt(leftA))
+    //   console.log(leftA)
+    //   console.log('crosses ' + occupiedCross)
+    //   console.log('circles ' + occupiedCircle)
+    //   console.log(occupiedCross[0])
  
-    }
-    setInterval(scoreCheck, 1000)
+    // }
+    // setInterval(scoreCheck, 2000)
 
     window.addEventListener('keypress', enterOne)
 
