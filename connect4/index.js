@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () =>{
   const board = []
   const height = 6
   const width = 7
+  const occupiedCross = []
+  const occupiedCircle = []
 
   let playerOne
   let playerTwo
@@ -118,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+                occupiedCross.push(playerOne + width * i)
                 return
               }
             }
@@ -127,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+              occupiedCross.push(playerOne + width * i)
               return
             }
           }
@@ -137,6 +141,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+                occupiedCross.push(playerOne + width * i)
                 return
               }
             }
@@ -146,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+              occupiedCross.push(playerOne + width * i)
               return
             }
           }
@@ -156,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+                occupiedCross.push(playerOne + width * i)
                 return
               }
             }
@@ -165,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+              occupiedCross.push(playerOne + width * i)
               return
             }
           }
@@ -175,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+                occupiedCross.push(playerOne + width * i)
                 return
               }
             }
@@ -184,6 +193,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+              occupiedCross.push(playerOne + width * i)
               return
             }
           }
@@ -194,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+                occupiedCross.push(playerOne + width * i)
                 return
               }
             }
@@ -203,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+              occupiedCross.push(playerOne + width * i)
               return
             }
           }
@@ -213,6 +225,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+                occupiedCross.push(playerOne + width * i)
                 return
               }
             }
@@ -222,6 +235,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+              occupiedCross.push(playerOne + width * i)
               return
             }
           }
@@ -232,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+                occupiedCross.push(playerOne + width * i)
                 return
               }
             }
@@ -241,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
+              occupiedCross.push(playerOne + width * i)
               return
             }
           }
@@ -262,6 +278,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
                 window.addEventListener('keypress', enterOne)
                 document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+                occupiedCircle.push(playerTwo + width * i)
                 return
               }
             }
@@ -271,6 +288,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+              occupiedCircle.push(playerTwo + width * i)
               return
             }
           }
@@ -281,6 +299,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+              occupiedCircle.push(playerTwo + width * i)
                 return
               }
             }
@@ -290,6 +309,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+              occupiedCircle.push(playerTwo + width * i)
               return
             }
           }
@@ -300,6 +320,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+              occupiedCircle.push(playerTwo + width * i)
                 return
               }
             }
@@ -309,6 +330,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+              occupiedCircle.push(playerTwo + width * i)
               return
             }
           }
@@ -319,6 +341,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+              occupiedCircle.push(playerTwo + width * i)
                 return
               }
             }
@@ -328,6 +351,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+              occupiedCircle.push(playerTwo + width * i)
               return
             }
           }
@@ -338,6 +362,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+              occupiedCircle.push(playerTwo + width * i)
                 return
               }
             }
@@ -347,6 +372,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+              occupiedCircle.push(playerTwo + width * i)
               return
             }
           }
@@ -357,6 +383,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
                 window.addEventListener('keypress', enterOne)
                 document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+                occupiedCircle.push(playerTwo + width * i)
                 return
               }
             }
@@ -366,6 +393,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+              occupiedCircle.push(playerTwo + width * i)
               return
             }
           }
@@ -376,6 +404,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
                 window.addEventListener('keypress', enterOne)
                 document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+                occupiedCircle.push(playerTwo + width * i)
                 return
               }
             }
@@ -385,6 +414,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
+              occupiedCircle.push(playerTwo + width * i)
               return
             }
           }
@@ -392,6 +422,16 @@ document.addEventListener('DOMContentLoaded', () =>{
         default:
       }
     }
+
+
+    function scoreCheck(){
+      const left = [board[i], board[i]]
+
+      console.log(occupiedCross)
+      console.log(occupiedCircle)
+ 
+    }
+    setInterval(scoreCheck, 1000)
 
     window.addEventListener('keypress', enterOne)
 
