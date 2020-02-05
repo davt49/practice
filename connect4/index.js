@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () =>{
   let playerOne
   let playerTwo
 
-  //Set the Grid
+  //Make the Grid
   function makeGrid(){
     for (i = 0; i < height * width; i++){
       const square = document.createElement('div')
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     console.log(e.keyCode)
     }
 
-    //PlayerOne submit
+    //PlayerOne Submit Button
     function enterOne(e){
 
       switch(e.keyCode){
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () =>{
       }
     }
 
-    //PlayerTwo submit
+    //PlayerTwo Submit Button
     function enterTwo(e){
       switch(e.keyCode){
         case 44:
