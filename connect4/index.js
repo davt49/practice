@@ -439,6 +439,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         if (occupied[i] === 1 && occupied[`${i + 1}`] === 1 && occupied[`${i + 2}`] === 1 && occupied[`${i + 3}`] === 1 || occupied[i] === 1 && occupied[`${i + width}`] === 1 && occupied[`${i + width * 2}`] === 1 && occupied[`${i + width * 3}`] === 1 || occupied[i] === 1 && occupied[`${i + width + 1}`] === 1 && occupied[`${i + width * 2 + 2}`] === 1 && occupied[`${i + width * 3 + 3}`] === 1 || occupied[i] === 1 && occupied[`${i + width - 1}`] === 1 && occupied[`${i + width * 2 - 2}`] === 1 && occupied[`${i + width * 3 - 3}`] === 1){
           console.log('player one wins')
           document.getElementById('player-turn').innerHTML = 'Player One Wins!!!!'
+          document.getElementById('player-turn').style.color = 'teal'
           window.removeEventListener('keypress', enterOne)
           window.removeEventListener('keypress', enterTwo)
           return
@@ -446,6 +447,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         else if (occupied[i] === 2 && occupied[`${i + 1}`] === 2 && occupied[`${i + 2}`] === 2 && occupied[`${i + 3}`] === 2 || occupied[i] === 2 && occupied[`${i + width}`] === 2 && occupied[`${i + width * 2}`] === 2 && occupied[`${i + width * 3}`] === 2 || occupied[i] === 2 && occupied[`${i + width + 1}`] === 2 && occupied[`${i + width * 2 + 2}`] === 2 && occupied[`${i + width * 3 + 3}`] === 2 || occupied[i] === 2 && occupied[`${i + width - 1}`] === 2 && occupied[`${i + width * 2 - 2}`] === 2 && occupied[`${i + width * 3 - 3}`] === 2){
           console.log('player two wins')
           document.getElementById('player-turn').innerHTML = 'Player Two Wins!!!!'
+          document.getElementById('player-turn').style.color = 'teal'
           window.removeEventListener('keypress', enterOne)
           window.removeEventListener('keypress', enterTwo)
           return
