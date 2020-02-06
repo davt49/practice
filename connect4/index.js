@@ -4,8 +4,16 @@ document.addEventListener('DOMContentLoaded', () =>{
   const board = []
   const height = 6
   const width = 7
-  const occupiedCross = []
-  const occupiedCircle = []
+  // const occupiedCross = []
+  // const occupiedCircle = []
+
+  const occupied = 
+    [0,0,0,0,0,0,0,
+     0,0,0,0,0,0,0,
+     0,0,0,0,0,0,0,
+     0,0,0,0,0,0,0,
+     0,0,0,0,0,0,0,
+     0,0,0,0,0,0,0]
 
   let playerOne
   let playerTwo
@@ -120,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-                occupiedCross.push(playerOne + width * i)
+                occupied[playerOne + width * i] = 1
                 return
               }
             }
@@ -130,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-              occupiedCross.push(playerOne + width * i)
+              occupied[playerOne + width * i] = 1
               return
             }
           }
@@ -141,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-                occupiedCross.push(playerOne + width * i)
+                occupied[playerOne + width * i] = 1
                 return
               }
             }
@@ -151,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-              occupiedCross.push(playerOne + width * i)
+              occupied[playerOne + width * i] = 1
               return
             }
           }
@@ -162,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-                occupiedCross.push(playerOne + width * i)
+                occupied[playerOne + width * i] = 1
                 return
               }
             }
@@ -172,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-              occupiedCross.push(playerOne + width * i)
+              occupied[playerOne + width * i] = 1
               return
             }
           }
@@ -183,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-                occupiedCross.push(playerOne + width * i)
+                occupied[playerOne + width * i] = 1
                 return
               }
             }
@@ -193,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-              occupiedCross.push(playerOne + width * i)
+              occupied[playerOne + width * i] = 1
               return
             }
           }
@@ -204,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-                occupiedCross.push(playerOne + width * i)
+                occupied[playerOne + width * i] = 1
                 return
               }
             }
@@ -214,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-              occupiedCross.push(playerOne + width * i)
+              occupied[playerOne + width * i] = 1
               return
             }
           }
@@ -225,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-                occupiedCross.push(playerOne + width * i)
+                occupied[playerOne + width * i] = 1
                 return
               }
             }
@@ -235,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-              occupiedCross.push(playerOne + width * i)
+              occupied[playerOne + width * i] = 1
               return
             }
           }
@@ -246,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterOne)
                 window.addEventListener('keypress', enterTwo)
                 document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-                occupiedCross.push(playerOne + width * i)
+                occupied[playerOne + width * i] = 1
                 return
               }
             }
@@ -256,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterOne)
               window.addEventListener('keypress', enterTwo)
               document.getElementById('player-turn').innerHTML = 'Player Two\'s Turn!'
-              occupiedCross.push(playerOne + width * i)
+              occupied[playerOne + width * i] = 1
               return
             }
           }
@@ -278,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
                 window.addEventListener('keypress', enterOne)
                 document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-                occupiedCircle.push(playerTwo + width * i)
+                occupied[playerTwo + width * i] = 2
                 return
               }
             }
@@ -288,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-              occupiedCircle.push(playerTwo + width * i)
+              occupied[playerTwo + width * i] = 2
               return
             }
           }
@@ -299,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-              occupiedCircle.push(playerTwo + width * i)
+              occupied[playerTwo + width * i] = 2
                 return
               }
             }
@@ -309,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-              occupiedCircle.push(playerTwo + width * i)
+              occupied[playerTwo + width * i] = 2
               return
             }
           }
@@ -320,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-              occupiedCircle.push(playerTwo + width * i)
+              occupied[playerTwo + width * i] = 2
                 return
               }
             }
@@ -330,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-              occupiedCircle.push(playerTwo + width * i)
+              occupied[playerTwo + width * i] = 2
               return
             }
           }
@@ -341,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-              occupiedCircle.push(playerTwo + width * i)
+              occupied[playerTwo + width * i] = 2
                 return
               }
             }
@@ -351,7 +359,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-              occupiedCircle.push(playerTwo + width * i)
+              occupied[playerTwo + width * i] = 2
               return
             }
           }
@@ -362,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-              occupiedCircle.push(playerTwo + width * i)
+              occupied[playerTwo + width * i] = 2
                 return
               }
             }
@@ -372,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-              occupiedCircle.push(playerTwo + width * i)
+              occupied[playerTwo + width * i] = 2
               return
             }
           }
@@ -383,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
                 window.addEventListener('keypress', enterOne)
                 document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-                occupiedCircle.push(playerTwo + width * i)
+                occupied[playerTwo + width * i] = 2
                 return
               }
             }
@@ -393,7 +401,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-              occupiedCircle.push(playerTwo + width * i)
+              occupied[playerTwo + width * i] = 2
               return
             }
           }
@@ -404,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 window.removeEventListener('keypress', enterTwo)
                 window.addEventListener('keypress', enterOne)
                 document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-                occupiedCircle.push(playerTwo + width * i)
+                occupied[playerTwo + width * i] = 2
                 return
               }
             }
@@ -414,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () =>{
               window.removeEventListener('keypress', enterTwo)
               window.addEventListener('keypress', enterOne)
               document.getElementById('player-turn').innerHTML = 'Player One\'s Turn!'
-              occupiedCircle.push(playerTwo + width * i)
+              occupied[playerTwo + width * i] = 2
               return
             }
           }
@@ -423,57 +431,30 @@ document.addEventListener('DOMContentLoaded', () =>{
       }
     }
 
-    // function checkaround(){
-    //     for (i = 0;i < 41;i++){
-    //       let numCheck = occupiedCross[i]
-    //       let leftA = occupiedCross[i - 1]
-    //       let leftB = occupiedCross[i - 2]
-    //       let leftC = occupiedCross[i - 3]
-    //       let rightA = occupiedCross[i + 1]
-    //       let rightB = occupiedCross[i + 2]
-    //       let rightC = occupiedCross[i + 3]
-    //       let upA = occupiedCross[i - width]
-    //       let upB = occupiedCross[i - width * 2]
-    //       let upC = occupiedCross[i - width * 3]
-    //       let downA = occupiedCross[i + width]
-    //       let downB = occupiedCross[i + width * 2]
-    //       let downC = occupiedCross[i + width * 3]
-    //     console.log(i)
-    //     console.log(numCheck)
-    //     console.log(leftA)
-    //   }
-    // }
 
-    // checkaround()
-
-    // function scoreCheck(){
-    //   const numCheck = occupiedCross[checkaround]
-    //   const leftA = occupiedCross[checkaround - 1]
-    //   const leftB = occupiedCross[checkaround - 2]
-    //   const leftC = occupiedCross[checkaround - 3]
-    //   const rightA = occupiedCross[checkaround + 1]
-    //   const rightB = occupiedCross[checkaround + 2]
-    //   const rightC = occupiedCross[checkaround + 3]
-    //   const upA = occupiedCross[checkaround - width]
-    //   const upB = occupiedCross[checkaround - width * 2]
-    //   const upC = occupiedCross[checkaround - width * 3]
-    //   const downA = occupiedCross[checkaround + width]
-    //   const downB = occupiedCross[checkaround + width * 2]
-    //   const downC = occupiedCross[checkaround + width * 3]
-
-    //   // const left = [board[numCheck], board[leftA], board[leftb], board[leftc]]
-    //   // const right = [board[occupiedCross[checkaround]], board[checkaround + 1], board[checkaround + 2], board[checkaround + 3]]
-    //   // const up = [board[occupiedCross[checkaround]], board[checkaround - width], board[checkaround - width * 2], board[checkaround - width * 3]]
-    //   // const down = [board[occupiedCross[checkaround]], board[checkaround + width], board[checkaround + width * 2], board[checkaround + width * 3]]
-
-    //   // console.log(parseInt(leftA))
-    //   console.log(leftA)
-    //   console.log('crosses ' + occupiedCross)
-    //   console.log('circles ' + occupiedCircle)
-    //   console.log(occupiedCross[0])
+    function scoreCheck(){
+    
+      //horizontal, vertical, toplefttobottomright, toprighttobottomleft
+      for( i = 0; i < occupied.length; i++){
+        if (occupied[i] === 1 && occupied[`${i + 1}`] === 1 && occupied[`${i + 2}`] === 1 && occupied[`${i + 3}`] === 1 || occupied[i] === 1 && occupied[`${i + width}`] === 1 && occupied[`${i + width * 2}`] === 1 && occupied[`${i + width * 3}`] === 1 || occupied[i] === 1 && occupied[`${i + width + 1}`] === 1 && occupied[`${i + width * 2 + 2}`] === 1 && occupied[`${i + width * 3 + 3}`] === 1 || occupied[i] === 1 && occupied[`${i + width - 1}`] === 1 && occupied[`${i + width * 2 - 2}`] === 1 && occupied[`${i + width * 3 - 3}`] === 1){
+          console.log('player one wins')
+          document.getElementById('player-turn').innerHTML = 'Player One Wins!!!!'
+          window.removeEventListener('keypress', enterOne)
+          window.removeEventListener('keypress', enterTwo)
+          return
+        }
+        else if (occupied[i] === 2 && occupied[`${i + 1}`] === 2 && occupied[`${i + 2}`] === 2 && occupied[`${i + 3}`] === 2 || occupied[i] === 2 && occupied[`${i + width}`] === 2 && occupied[`${i + width * 2}`] === 2 && occupied[`${i + width * 3}`] === 2 || occupied[i] === 2 && occupied[`${i + width + 1}`] === 2 && occupied[`${i + width * 2 + 2}`] === 2 && occupied[`${i + width * 3 + 3}`] === 2 || occupied[i] === 2 && occupied[`${i + width - 1}`] === 2 && occupied[`${i + width * 2 - 2}`] === 2 && occupied[`${i + width * 3 - 3}`] === 2){
+          console.log('player two wins')
+          document.getElementById('player-turn').innerHTML = 'Player Two Wins!!!!'
+          window.removeEventListener('keypress', enterOne)
+          window.removeEventListener('keypress', enterTwo)
+          return
+        }
+      }
+      console.log('crosses ' + occupied)
  
-    // }
-    // setInterval(scoreCheck, 2000)
+    }
+    setInterval(scoreCheck, 2000)
 
     window.addEventListener('keypress', enterOne)
 
