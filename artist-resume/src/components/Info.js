@@ -12,14 +12,14 @@ class Info extends React.Component{
     return(
       <div>
         <ul>
-          <li>Name</li>
-          <li>Stage Name</li>
-          <li>Address</li>
-          <li>Email</li>
-          <li>Telephone Number</li>
-          <li>Skills</li>
-          <li>Languages</li>
-          <li>Biography</li>
+          <li><textarea placeholder='Name'></textarea></li>
+          <li><textarea placeholder='Stage Name'></textarea></li>
+          <li><textarea placeholder='Address'></textarea></li>
+          <li><textarea placeholder='Email'></textarea></li>
+          <li><textarea placeholder='Telephone Number'></textarea></li>
+          <li><textarea placeholder='Skills'></textarea></li>
+          <li><textarea placeholder='Languages'></textarea></li>
+          <li><textarea placeholder='Biography'></textarea></li>
         </ul>
       </div>
     )
