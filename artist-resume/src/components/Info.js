@@ -5,22 +5,28 @@ class Info extends React.Component{
   constructor(){
     super()
 
-    this.state = {}
+    this.state = {
+      data:{}
+    }
   }
+
+  handleChange(){}
 
   render(){
     return(
       <div>
-        <ul>
-          <li><textarea placeholder='Name'></textarea></li>
-          <li><textarea placeholder='Stage Name'></textarea></li>
-          <li><textarea placeholder='Address'></textarea></li>
-          <li><textarea placeholder='Email'></textarea></li>
-          <li><textarea placeholder='Telephone Number'></textarea></li>
-          <li><textarea placeholder='Skills'></textarea></li>
-          <li><textarea placeholder='Languages'></textarea></li>
-          <li><textarea placeholder='Biography'></textarea></li>
-        </ul>
+        <form className='form'>
+          <input type='text' placeholder='Name'></input>
+          <input type='text' placeholder='Stage Name'></input>
+          <input type='text' placeholder='Address'></input>
+          <input type='text' placeholder='Email'></input>
+          <input type='text' placeholder='Telephone Number'></input>
+          <input type='text' placeholder='Skills'></input>
+          <input type='text' placeholder='Languages'></input>
+          <div className='text-area'>
+            <textarea placeholder='Biography' className='big-input'></textarea>
+          </div>
+        </form>
       </div>
     )
   }
