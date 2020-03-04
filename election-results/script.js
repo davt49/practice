@@ -12,7 +12,6 @@ function calculate(info){
   // }
   // console.log(total)
 
-  console.log(info[1] + info[3] + info[5] +info[7] + info[9])
 }
 
 
@@ -42,10 +41,10 @@ function printIt(info){
   }
 }
 
-// printIt(cw)
-calculate(cw)
+printIt(cw)
+// calculate(cw)
 
-// printIt(isf)
+printIt(isf)
 
 
 
